@@ -8,6 +8,8 @@ import com.thoughtworks.codepairing.model.Order;
 import java.util.ArrayList;
 import java.util.List;
 
+import static java.lang.System.*;
+
 public class SampleApp {
     public static void main(String[] args) {
         Product product1 = new Product(10.0, "DIS_10_PRODUCT1", "product 1");
@@ -22,9 +24,9 @@ public class SampleApp {
         ShoppingCart shoppingCart = new ShoppingCart(customer, products);
         Product product3 = new Product(30.0, "DIS_10_PRODUCT3", "product 3");
         shoppingCart.addProduct(product3);
-        System.out.println(shoppingCart.toString());
+        out.println(shoppingCart.toString());
 
         Order order = shoppingCart.checkout();
-        System.out.println(order.toString());
+        out.println(order.toString());
     }
 }
